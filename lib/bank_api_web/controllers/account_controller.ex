@@ -6,7 +6,7 @@ defmodule BankAPIWeb.AccountController do
 
   action_fallback BankAPIWeb.FallbackController
 
-  def create(conn, %{"accounts" => account_params}) do
+  def create(conn, %{"account" => account_params}) do
     with {:ok, %Account{} = account} <- Accounts.open_account(account_params) do
       conn
       |> put_status(:created)

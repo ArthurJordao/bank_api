@@ -24,7 +24,7 @@ defmodule BankAPIWeb.AccountControllerTest do
 
       assert %{
                "uuid" => _uuid,
-               "current_balance" => 4200
+               "current_balance" => 42_000
              } = json_response(conn, 201)["data"]
     end
 
@@ -36,7 +36,7 @@ defmodule BankAPIWeb.AccountControllerTest do
           account: @invalid_attrs
         )
 
-      assert json_response(conn, 422)["errors" != %{}]
+      assert json_response(conn, 422)["errors"] != %{}
     end
   end
 end
