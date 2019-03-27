@@ -22,4 +22,3 @@ config :commanded,
 
 config :commanded, Commanded.EventStore.Adapters.InMemory,
   serializer: Commanded.Serialization.JsonSerializer
-

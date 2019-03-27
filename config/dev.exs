@@ -32,4 +32,3 @@ config :eventstore, EventStore.Storage,
   hostname: "localhost",
   pool_size: 10,
   pool_overflow: 5
-
