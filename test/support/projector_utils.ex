@@ -18,9 +18,10 @@ defmodule BankAPI.Test.ProjectorUtils do
   end
 
   def get_last_seen_event_number(name) do
-    query = from p in "projection_versions",
-                 where: p.projection_name == ^name,
-                 select: p.last_seen_event_number
+    query =
+      from p in "projection_versions",
+        where: p.projection_name == ^name,
+        select: p.last_seen_event_number
 
     Repo.one(query) || 0
   end

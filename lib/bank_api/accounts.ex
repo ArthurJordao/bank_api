@@ -9,7 +9,6 @@ defmodule BankAPI.Accounts do
   alias BankAPI.Accounts.Projections.Account
   alias BankAPI.Repo
   alias BankAPI.Router
-  alias Ecto.Changeset
 
   def get_account(uuid), do: Repo.get!(Account, uuid)
 
