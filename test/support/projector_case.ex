@@ -1,5 +1,8 @@
 defmodule BankAPI.ProjectorCase do
+  @moduledoc false
   use ExUnit.CaseTemplate
+
+  alias BankAPI.Test.ProjectorUtils
 
   using do
     quote do
@@ -10,12 +13,12 @@ defmodule BankAPI.ProjectorCase do
       import Ecto.Query
       import BankAPI.DataCase
 
-      import BankAPI.Test.ProjectorUtils
+      import ProjectorUtils
     end
   end
 
   setup _tags do
-    :ok = BankAPI.Test.ProjectorUtils.truncate_database()
+    :ok = ProjectorUtils.truncate_database()
 
     :ok
   end

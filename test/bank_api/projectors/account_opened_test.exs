@@ -1,8 +1,8 @@
 defmodule Projectors.AccountOpenedTest do
   use BankAPI.ProjectorCase
 
-  alias BankAPI.Accounts.Projections.Account
   alias BankAPI.Accounts.Events.AccountOpened
+  alias BankAPI.Accounts.Projections.Account
   alias BankAPI.Accounts.Projectors.AccountOpened, as: Projector
 
   test "should succeed with valid data" do

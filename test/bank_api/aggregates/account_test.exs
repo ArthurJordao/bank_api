@@ -2,8 +2,8 @@ defmodule BankAPI.Aggregates.AccountTest do
   use BankAPI.Test.InMemoryEventStoreCase
 
   alias BankAPI.Accounts.Aggregates.Account, as: Aggregate
-  alias BankAPI.Accounts.Events.AccountOpened
   alias BankAPI.Accounts.Commands.OpenAccount
+  alias BankAPI.Accounts.Events.AccountOpened
 
   test "ensure agregate gets correct state on creation" do
     uuid = UUID.uuid4()

@@ -1,4 +1,5 @@
 defmodule BankAPI.Accounts.Commands.OpenAccount do
+  @moduledoc false
   @enforce_keys [:account_uuid]
 
   @uuid_regex ~r/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/
@@ -17,15 +18,14 @@ defmodule BankAPI.Accounts.Commands.OpenAccount do
   end
 
   def positive_integer(data) do
-    cond do
-      is_integer(data) ->
-        if data > 0 do
-          :ok
-        else
-          {:error, "Argument must be bigger than zero"}
-        end
-      true ->
-        {:error, "Argument must be an integer"}
+    if is_integer(data) do
+      if data > 0 do
+        :ok
+      else
+        {:error, "Argument must be bigger than zero"}
+      end
+    else
+      {:error, "Argument must be an integer"}
     end
   end
 end

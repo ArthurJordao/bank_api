@@ -1,4 +1,5 @@
 defmodule BankAPI.Accounts.Aggregates.Account do
+  @moduledoc false
   defstruct uuid: nil,
             current_balance: nil
 

@@ -5,11 +5,11 @@ defmodule BankAPI.Accounts do
 
   import Ecto.Query, warn: false
 
-  alias Ecto.Changeset
-  alias BankAPI.Repo
-  alias BankAPI.Router
   alias BankAPI.Accounts.Commands.OpenAccount
   alias BankAPI.Accounts.Projections.Account
+  alias BankAPI.Repo
+  alias BankAPI.Router
+  alias Ecto.Changeset
 
   def get_account(uuid), do: Repo.get!(Account, uuid)
 

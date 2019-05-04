@@ -1,4 +1,5 @@
 defmodule BankAPI.Test.InMemoryEventStoreCase do
+  @moduledoc false
   use ExUnit.CaseTemplate
 
   using do

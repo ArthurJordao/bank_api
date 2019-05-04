@@ -1,4 +1,5 @@
 defmodule BankAPI.Accounts.Events.AccountOpened do
+  @moduledoc false
   @derive [Jason.Encoder]
 
   defstruct [

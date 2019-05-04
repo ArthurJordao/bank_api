@@ -1,4 +1,5 @@
 defmodule BankAPI.Test.AggregateUtils do
+  @moduledoc false
   def evolve(aggregate, events) do
     Enum.reduce(
       List.wrap(events),

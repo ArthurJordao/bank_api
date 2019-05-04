@@ -1,4 +1,5 @@
 defmodule BankAPI.Middleware.ValidateCommand do
+  @moduledoc false
   @behaviour Commanded.Middleware
 
   alias Commanded.Middleware.Pipeline

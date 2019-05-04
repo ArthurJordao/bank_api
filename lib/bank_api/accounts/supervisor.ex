@@ -1,4 +1,5 @@
 defmodule BankAPI.Accounts.Supervisor do
+  @moduledoc false
   use Supervisor
 
   alias BankAPI.Accounts
