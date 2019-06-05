@@ -38,3 +38,6 @@ bank_api-*.tar
 # Ignore Idea files
 *.iml
 .idea
+
+# Ignore VS Code files
+.elixir_ls/
